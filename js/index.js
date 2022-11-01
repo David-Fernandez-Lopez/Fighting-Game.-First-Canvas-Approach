@@ -1,0 +1,6 @@
+
+
+game.init()
+
+
+// TODO ESTO HAY QUE ADAPTARLO A NUESTRO JUEGO

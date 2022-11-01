@@ -1,21 +1,15 @@
 class Player {
 
-    constructor(ctx, canvasSize) {
+    constructor(ctx, canvasSize, playerPos) {
         
         this.ctx = ctx
         this.canvasSize = canvasSize
+        this.playerPos =  playerPos
 
-        this.playerPos = {
-            x: undefined,
-            y: undefined
-        }
 
-        this.playerSize = {
-            w: undefined,
-            h: undefined
-        }
+        this.floor = this.canvasSize.h - this.playerSize.h - 50
+        
 
-        this.health = 100
 
     }
 }

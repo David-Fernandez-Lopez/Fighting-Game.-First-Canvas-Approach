@@ -13,3 +13,63 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
+.header {
+    position: absolute;
+    /* background-color: red; */
+    width: 100%;
+    height: 150px;
+}
+
+.relative {
+    position:relative;
+    /* background-color: grey; */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px
+}
+
+.counter {
+    width: 200;
+    height: 200;
+    border: 10px;
+    border-color: black;
+    border-width: 10px;
+    background-color: aqua;
+    flex-shrink: 0;
+    padding: 50px;
+    margin: 20px;
+}
+
+.healthBar1 {
+    
+    background-color: yellowgreen;
+    padding: 20px;
+}
+
+.healthBar2 {
+   
+    background-color: yellowgreen;
+    padding: 20px;
+}
+
+.parentContainer1 {
+    position:relative;
+    width: 100%;
+    background-color: blue;
+}
+
+.parentContainer2 {
+    position:relative;
+    width: 100%;
+    background-color: blue;
+}
+
+.container {
+    position: absolute;
+    background-color: blue;
+    padding: 20px;
+}

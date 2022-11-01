@@ -1,11 +1,12 @@
 class Projectile {
 
-    constructor(ctx, characterPos, characterSize, tempEnemyData) {
+    constructor(ctx, characterPos, characterSize, enemyPos, enemySize) {
 
         this.ctx = ctx
         this.characterPos = characterPos
         this.characterSize = characterSize
-        this.tempEnemyData = tempEnemyData
+        this.enemyPos = enemyPos
+        this.enemySize = enemySize
         
         this.projectilePos = {
             x: characterPos.x + 25,
@@ -18,6 +19,13 @@ class Projectile {
         }
         
         this.projectileSpeed = 10
+
+
+        if (this.enemyPos.x <= this.characterPos.x) {
+            this.projectileSpeed = -10
+        }
+
+        // this.projectileOrientationLeft = false
         
 
     }
@@ -30,39 +38,31 @@ class Projectile {
         this.ctx.fillRect(this.projectilePos.x, this.projectilePos.y, this.projectileSize.w, this.projectileSize.h)
         
         this.move()
-        this.projectileCollision()
+        // this.projectileCollision()
     }
 
     move() {
 
-
-        if (this.tempEnemyData.x <= this.characterPos.x) {
-            this.projectilePos.x -= this.projectileSpeed
-        }
-        
-        if (this.tempEnemyData.x > this.characterPos.x) {
-            this.projectilePos.x +=this.projectileSpeed
-        }
-        // console.log(this.projectilePos.x)
+        this.projectilePos.x += this.projectileSpeed
     }
 
-    projectileCollision() {
+    // projectileCollision() {
 
-        if (this.projectilePos.x < this.tempEnemyData.x + this.tempEnemyData.w &&
-            this.projectilePos.x + this.projectileSize.w > this.tempEnemyData.x &&
-            this.projectilePos.y < this.tempEnemyData.y + this.tempEnemyData.h &&
-            this.projectileSize.h + this.projectilePos.y > this.tempEnemyData.y) {
-            console.log('LEFT BALL ATTACK')
-        }
+    //     if (this.projectilePos.x < this.enemyPos.x + this.enemySize.w &&
+    //         this.projectilePos.x + this.projectileSize.w > this.enemyPos.x &&
+    //         this.projectilePos.y < this.enemyPos.y + this.enemySize.h &&
+    //         this.projectileSize.h + this.projectilePos.y > this.enemyPos.y) {
+    //         console.log('LEFT BALL ATTACK')
+    //     }
         
-        if  (this.tempEnemyData.x < this.projectilePos.x -5 + this.projectileSize.w &&
-            this.tempEnemyData.x + this.tempEnemyData.w > this.projectilePos.x - 5 &&
-            this.tempEnemyData.y < this.projectilePos.y + this.projectileSize.h &&
-            this.tempEnemyData.h + this.tempEnemyData.y > this.projectilePos.y) {
+    //     if  (this.enemyPos.x < this.projectilePos.x -5 + this.projectileSize.w &&
+    //         this.enemyPos.x + this.enemySize.w > this.projectilePos.x - 5 &&
+    //         this.enemyPos.y < this.projectilePos.y + this.projectileSize.h &&
+    //         this.enemySize.h + this.enemyPos.y > this.projectilePos.y) {
             
-            console.log('RIGHT BALL ATTACK')
-        }
+    //         console.log('RIGHT BALL ATTACK')
+    //     }
         
-    }
+    // }
     
 }

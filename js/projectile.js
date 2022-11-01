@@ -46,23 +46,5 @@ class Projectile {
         this.projectilePos.x += this.projectileSpeed
     }
 
-    // projectileCollision() {
-
-    //     if (this.projectilePos.x < this.enemyPos.x + this.enemySize.w &&
-    //         this.projectilePos.x + this.projectileSize.w > this.enemyPos.x &&
-    //         this.projectilePos.y < this.enemyPos.y + this.enemySize.h &&
-    //         this.projectileSize.h + this.projectilePos.y > this.enemyPos.y) {
-    //         console.log('LEFT BALL ATTACK')
-    //     }
-        
-    //     if  (this.enemyPos.x < this.projectilePos.x -5 + this.projectileSize.w &&
-    //         this.enemyPos.x + this.enemySize.w > this.projectilePos.x - 5 &&
-    //         this.enemyPos.y < this.projectilePos.y + this.projectileSize.h &&
-    //         this.enemySize.h + this.enemyPos.y > this.projectilePos.y) {
-            
-    //         console.log('RIGHT BALL ATTACK')
-    //     }
-        
-    // }
     
 }

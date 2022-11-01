@@ -119,7 +119,6 @@ class Character {
         //  console.log('salto')
         this.characterPos.y -= 100
         this.speed.y -= 12
-        // this.characterPos.y -= this.speed.y
     }
 
     physicalAttackBox(enemyPos) {
@@ -182,9 +181,6 @@ class Character {
                     this.projectileArray.splice(index,1)
                 } 
         }) 
-
-       
-        
     }
 
 

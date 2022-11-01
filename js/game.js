@@ -174,7 +174,7 @@ const game = {
                     }
                     break;
                 case ' ':
-                    console.log(this.characters[1].characterPos)
+                    // console.log(this.characters[1].characterPos)
                     this.characters[0].attackCounter++
                     if (this.characters[0].attackCounter === 1 || this.characters[0].attackCounter % 15 === 0) this.characters[0].physicalAttack(this.characters[1].characterPos, this.characters[1].characterSize)
                     break;
@@ -255,8 +255,8 @@ const game = {
         
         this.backgrounds.forEach(elem => elem.drawBackground())
         this.characters.forEach(elem => elem.drawCharacter())
-        // this.healthBarrPL1()
-        // this.healthBarrPL2()
+        this.healthBarrPL1()
+        this.healthBarrPL2()
         this.drawCountDown()
         // this.tempEnemy()
     },
@@ -276,7 +276,8 @@ const game = {
             this.charName,
             this.charDamage,
             200,
-            this.player1Color
+            this.player1Color,
+            '#player2Health'
         )
         )
     },
@@ -292,7 +293,8 @@ const game = {
             this.charName,
             this.charDamage,
             this.canvasSize.w - 300,
-            this.player2Color
+            this.player2Color,
+            '#player1Health'
         )
         )
     },

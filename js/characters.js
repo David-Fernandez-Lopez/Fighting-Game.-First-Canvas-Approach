@@ -1,5 +1,5 @@
 class Character {           
-    constructor(ctx, canvasSize, enemyPos, enemySize, keys, charHealth, charName, charDamage, playerPos, color) {
+    constructor(ctx, canvasSize, enemyPos, enemySize, keys, charHealth, charName, charDamage, playerPos, color, enemyTag) {
         console.log(enemyPos)
         console.log(enemySize)
         
@@ -11,6 +11,7 @@ class Character {
         this.name = charName
         this.damage = charDamage
         this.color = color
+        this.enemyTag = enemyTag
         this.characterSize = {
             w: 100,
             h: 200
@@ -144,7 +145,8 @@ class Character {
             this.characterPos.x + 50 + this.attackBoxSize.w > enemyPos.x &&
             this.characterPos.y < enemyPos.y + enemySize.h &&
             this.attackBoxSize.h + this.characterPos.y > enemyPos.y) {
-             
+            
+            document.querySelector(this.enemyTag).style.width = 50%
             console.log('ATTACK')
         }
         
@@ -152,7 +154,7 @@ class Character {
             enemyPos.x + enemySize.w > this.characterPos.x -100 &&
             enemyPos.y < this.characterPos.y + this.attackBoxSize.h &&
             enemySize.h + enemyPos.y > this.characterPos.y) {
-            
+            document.querySelector(this.enemyTag).style.width = 50%
             console.log('ataca')
         }
     }
@@ -176,6 +178,9 @@ class Character {
                 elem.projectilePos.y < enemyPos.y + enemySize.h &&
                 elem.projectileSize.h + elem.projectilePos.y > enemyPos.y) {
                 // console.log('clearing collision')
+                // console.log(document.querySelector(this.enemyTag))
+                console.log(this.enemyTag)
+                document.querySelector(this.enemyTag).style.width = 20%
                 console.log('colisión 1')
                     let index = this.projectileArray.indexOf(elem)
                     this.projectileArray.splice(index,1)

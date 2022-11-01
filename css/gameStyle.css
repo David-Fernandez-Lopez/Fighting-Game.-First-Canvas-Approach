@@ -3,21 +3,6 @@ body {
     margin: 0;
 }
 
-.button {
-    font-size: 30px;
-    background-color: #870007;
-    color: #fff;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    position: absolute;
-    top: 50%;
-    left: 43%;
-    text-decoration: none;
-}
-
 .header {
     position: absolute;
     /* background-color: red; */

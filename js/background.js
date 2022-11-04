@@ -1,11 +1,11 @@
 class Background {
 
   constructor(ctx, canvasSize) {
-    this.ctx = ctx;
+    this.ctx = ctx
     this.canvasSize = canvasSize
 
-    this.background = new Image();
-    this.background.src = "../img/background_temp.jpg";
+    this.background = new Image()
+    this.background.src = "./img/background_GIF.gif"
 
       this.backgroundPos = {
           x: 0,

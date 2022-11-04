@@ -473,14 +473,14 @@ const game = {
     createPlayer1Wins() {
        
         this.stewie = new Image();
-        this.stewie.src = "../img/p1 wins.png"
+        this.stewie.src = "./img/p1 wins.png"
         
     },
 
     createPlayer2Wins() {
         
         this.hollow = new Image();
-        this.hollow.src = "../img/p2 wins.png"
+        this.hollow.src = "./img/p2 wins.png"
         
     },
 
@@ -495,7 +495,7 @@ const game = {
 
         document.querySelector('.key-box').style.visibility = 'hidden'
         
-        let deathSound = new Audio("../sounds/videogame-death-sound-43894.mp3")
+        let deathSound = new Audio("./sounds/videogame-death-sound-43894.mp3")
         deathSound.play()
         
     },
@@ -511,7 +511,7 @@ const game = {
 
         document.querySelector('.key-box').style.visibility = 'hidden'
         
-        let deathSound = new Audio("../sounds/videogame-death-sound-43894.mp3")
+        let deathSound = new Audio("./sounds/videogame-death-sound-43894.mp3")
         deathSound.play()
        
     }

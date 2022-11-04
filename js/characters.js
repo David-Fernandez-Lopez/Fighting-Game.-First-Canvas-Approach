@@ -558,7 +558,7 @@ class Character {
             this.attackBoxSize.h + this.characterPos.y > enemyPos.y) {
             this.enemyHealth -= 10
             document.querySelector(this.enemyTag).style.width = `${this.enemyHealth}%`
-            let punchSound = new Audio("../sounds/karate-chop-6357.mp3")
+            let punchSound = new Audio("./sounds/karate-chop-6357.mp3")
             punchSound.play()
             console.log('ATTACK')
         }
@@ -569,7 +569,7 @@ class Character {
             enemySize.h + enemyPos.y > this.characterPos.y) {
             this.enemyHealth -= 10
             document.querySelector(this.enemyTag).style.width = `${this.enemyHealth}%`
-            let punchSound = new Audio("../sounds/karate-chop-6357.mp3")
+            let punchSound = new Audio("./sounds/karate-chop-6357.mp3")
             punchSound.play()
             console.log('ataca')
         }
@@ -601,7 +601,7 @@ class Character {
                 // console.log('colisión 1')
                     let index = this.projectileArray.indexOf(elem)
                 this.projectileArray.splice(index, 1)
-                let punchSound = new Audio("../sounds/punch-2-37333.mp3")
+                let punchSound = new Audio("./sounds/punch-2-37333.mp3")
                 punchSound.play()
                 } 
         }) 
